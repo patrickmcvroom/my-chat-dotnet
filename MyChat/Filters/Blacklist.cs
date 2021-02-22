@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 using MindLink.Recruitment.MyChat.Data;
 using MindLink.Recruitment.MyChat.Exceptions;

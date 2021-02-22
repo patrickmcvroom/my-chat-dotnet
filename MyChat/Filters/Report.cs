@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics.CodeAnalysis;
 using MindLink.Recruitment.MyChat.Data;
-using MindLink.Recruitment.MyChat.Exceptions;
 
 namespace MindLink.Recruitment.MyChat.Filters
 {
@@ -41,6 +40,18 @@ namespace MindLink.Recruitment.MyChat.Filters
             {
                 activities.Add(new Activity(listOfUsers[i], report[listOfUsers[i]]));
             }
+
+            activities.Sort((Activity a, Activity b) =>
+            {
+                if (a.count > b.count)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return 1;
+                }
+            });
 
             conversation.activity = activities;
 

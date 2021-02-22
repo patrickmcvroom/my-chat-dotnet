@@ -22,7 +22,7 @@ namespace MindLink.Recruitment.MyChat.Tests
         [SetUp]
         public void SetupDummyConversation()
         {
-            List<Message> dummyMessages = new List<Message>()
+            var dummyMessages = new List<Message>()
             {
                 new Message(DateTime.Now, "Patrick", "I've completed my interview test and have submitted a pull request!"),
                 new Message(DateTime.Now, "MindLink", "Many thanks! The recruitment team will review your test submission and get back to you with feedback."),
@@ -31,7 +31,7 @@ namespace MindLink.Recruitment.MyChat.Tests
                 new Message(DateTime.Now, "Patrick", "Okay thanks, working on it!")
             };
 
-            Conversation dummyConversation = new Conversation("Dummy Conversation", dummyMessages);
+            var dummyConversation = new Conversation("Dummy Conversation", dummyMessages);
 
             _dummyConversation = dummyConversation;
         }
